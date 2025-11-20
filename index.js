@@ -254,3 +254,7 @@ const cityNames = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', '
 3. create array with the cities that have more than one word in their name (e.g., New York
 */ 
 // let citiesStartingWithS = []; // TODO: fill this array
+//push to git 
+// git add .  - ti shtosh te gjitha files ne staging area
+// git commit -m "your message" - te bej commit te changes me nje message
+// git push origin main - te dergoj ne github ne branch main
