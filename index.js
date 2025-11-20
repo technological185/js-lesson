@@ -253,3 +253,4 @@ const cityNames = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', '
 2. create array with the lengths of each city name,
 3. create array with the cities that have more than one word in their name (e.g., New York
 */ 
+// let citiesStartingWithS = []; // TODO: fill this array
