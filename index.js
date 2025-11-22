@@ -134,6 +134,10 @@ const inventory = [
 // console.log(true || false) // true
 // console.log(false || false) // false
 
+
+
+
+
 // console.log(result.restock);
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 
