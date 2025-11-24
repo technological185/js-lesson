@@ -14,8 +14,8 @@ You can write JavaScript code directly in an HTML file using the `<script>` tag.
 <head>
     <title>My First JavaScript</title>      
 </head>
-<body>
-    <h1>Hello, World!</h1>
+<body id='body'>
+    <h2>Hello, World!</h2>
     <script>
         console.log("Hello, World!");
     </script>
