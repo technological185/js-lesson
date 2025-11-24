@@ -293,3 +293,24 @@ console.log(multiWordCities);
 // git add .  - ti shtosh te gjitha files ne staging area
 // git commit -m "your message" - te bej commit te changes me nje message
 // git push origin main - te dergoj ne github ne branch main
+function doTheMath(num1,sign,num2){
+  let result;
+  switch (sign) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      result = num1 / num2;
+      break;
+    default:
+      result = 'Invalid operator';
+  }
+  return result;
+}
+console.log(doTheMath(4,"*",5));
