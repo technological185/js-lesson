@@ -134,10 +134,7 @@ const inventory = [
 // console.log(true || false) // true
 // console.log(false || false) // false
 
-const result = Object.groupBy(
-  inventory,
-  ({ type }) => type === 'fruit' && type
-);
+
 // console.log(result.restock);
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 
@@ -217,18 +214,34 @@ for (let a = 1; a <= num.length; a++) {
 }
 //Detyre 
 // Given array (you can change the numbers)
-const numbers = [1, 3, 5, 10, 12, 15, 20, 33, 50];
+const numbers = [1, 2, 3, 4, 5, 10, 11, 12, 15, 20, 33, 50, 300, 333, 555, 1000, 45, 65, 75, 222, 111, 64];
 
 // Create 3 empty arrays
 let evenNumbers = [];     // store even numbers here
 let oddNumbers = [];      // store odd numbers here
 let fizzBuzzResults = []; // store fizz / buzz / fizzbuzz results here
 
-/* TODO: loop through the numbers array
-for (/* your code here ) {
+// TODO: loop through the numbers array
+for ( let i = 0; i < numbers.length; i++) {
+  const n = numbers[i];
+  if (n % 2 === 0) {
+    evenNumbers.push(n);
+  } else {
+    oddNumbers.push(n);
+  }
+  if (n % 3 === 0 && n % 5 === 0) {
+    fizzBuzzResults.push("FizzBuzz");
+  } else if (n % 3 === 0) {
+    fizzBuzzResults.push("Fizz");
+  } else if (n % 5 === 0) {
+    fizzBuzzResults.push("Buzz");
+  } else {
+    fizzBuzzResults.push(n);                        
+
+}
 
   // TODO: get the current number
-  const n = /* your code here ;
+  //const n = /* your code here ;
 
   // TODO: if the number is even, push it into evenNumbers
   // TODO: otherwise push it into oddNumbers
@@ -241,15 +254,39 @@ for (/* your code here ) {
 }
 
 // TODO: log the 3 arrays to check your work
-// console.log(evenNumbers);
-// console.log(oddNumbers);
-// console.log(fizzBuzzResults);
-*/
+console.log(evenNumbers);
+console.log(oddNumbers);
+console.log(fizzBuzzResults);
+
 
 
 /* Bonus  
-const cityNames = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose'];
+
 1. Create a new array with the names of the cities starting with S,
 2. create array with the lengths of each city name,
 3. create array with the cities that have more than one word in their name (e.g., New York
 */ 
+const cityNames = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose'];
+let citiesStartingWithS = [];
+let cityNameLengths = [];
+let multiWordCities = [];
+for (let i = 0; i < cityNames.length; i++){
+    const city = cityNames[i];
+    for(let j = 0; j < city.length; j++){
+        if(j === 0 && city[j]==='S'){
+            citiesStartingWithS.push(city);
+        }
+    }
+    cityNameLengths.push(city.length-city.split(' ').length+1);
+
+    if (city.split(' ').length > 1){
+        multiWordCities.push(city);
+    }
+}
+console.log(citiesStartingWithS);
+console.log(cityNameLengths);
+console.log(multiWordCities);
+//push to git 
+// git add .  - ti shtosh te gjitha files ne staging area
+// git commit -m "your message" - te bej commit te changes me nje message
+// git push origin main - te dergoj ne github ne branch main
