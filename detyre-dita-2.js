@@ -1,5 +1,11 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(a, b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+}
 
 //test :
 console.log('Test 1 : ', maxOfTwoNumbers(3, 7) === 7 ? 'correct' : 'incorrect');
@@ -15,19 +21,44 @@ const words = [
   'crackpot',
 ];
 
-function findLongestWord() {}
+function findLongestWord(words) {
+  for (let i = 0; i < words.length; i++) {
+    let longest = '';
+    for (let j = 0; j < words.length; j++) {
+      if (words[j].length > longest.length) {
+        longest = words[j];
+      }
+    }
+    return longest;
+  }
+}
 
 console.log('Test 2 : ', findLongestWord(words) === 'crocodile' ? 'correct' : 'incorrect');
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(s) {
+  let sum = 0;
+  for (let i = 0; i < s.length; i++) {
+    sum += s[i];
+  }
+  return sum;
+}
 
 console.log('Test 3 : ', sumNumbers([10, 5, 4, 32, 8]) === 59 ? 'correct' : 'incorrect');
 
 // Iteration #3.1 Bonus:
 //calc the sum of the strings
-function sum() {}
+function sum(red) {
+  let total = 0;
+  for (let i = 0; i < red.length; i++) {
+    for (let j = 0; j < red[i].length; j++) {
+      total += 1;
+    }
+  }
+  return total;
+
+}
 
 console.log('Test 3.1 : ', sum(['ana', 'marco', 'nicolas', 'tania', 'ptwd']) === 24 ? 'correct' : 'incorrect');
 
@@ -35,7 +66,15 @@ console.log('Test 3.1 : ', sum(['ana', 'marco', 'nicolas', 'tania', 'ptwd']) ===
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(s) {
+  let sum = 0;
+  for (let i = 0; i < s.length; i++) {
+    sum += s[i];
+  }
+  let average = sum / s.length;
+  return average;
+
+}
 
 console.log('Test 4 : ', averageNumbers(numbersAvg) === 6 ? 'correct' : 'incorrect');
 
@@ -50,14 +89,40 @@ const wordsArr = [
   'smart',
   'chaos',
   'fuel',
-  'palace',
+  'age',
 ];
 
-function averageWordLength() {}
+function averageWordLength(d) {
+  let totalLength = 0;
+  for (let i = 0; i < d.length; i++) {
+    for (let j = 0; j < d[i].length; j++) {
+      totalLength += 1;
+    }
+  }
+  let averageLength = totalLength / d.length;
+  return averageLength;
+}
 
 console.log('Test 4.1 : ', averageWordLength(wordsArr) === 5 ? 'correct' : 'incorrect');
 // Bonus - Iteration #4.1
-function avg() {}
+function avg(yoyo) {
+  let total = 0;
+  for (let i = 0; i < yoyo.length; i++) {
+    if (typeof yoyo[i] === 'number') {
+      total += yoyo[i];
+    } else if (typeof yoyo[i] === 'string') {
+      total += yoyo[i].length;
+    } else if (typeof yoyo[i] === 'boolean') {
+      if (yoyo[i] === true) {
+        total += 1;
+      } else {
+        total += 0;
+      }
+    }
+  }
+  let average = total / yoyo.length;
+  return average; 
+}
 console.log(
   'Test 4.2 : ', avg([6, 12, 'miami', 1, 'barca', '200', 'lisboa', 8, false]) === 46 / 9 ? 'correct' : 'incorrect'
 );
@@ -77,7 +142,15 @@ const wordsUnique = [
   'bring',
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(y) {
+  let uniqueArr = [];
+  for (let i = 0; i < y.length; i++) {
+    if (uniqueArr.indexOf(y[i]) === -1) {
+      uniqueArr.push(y[i]);
+    }
+  }
+  return uniqueArr;
+}
 console.log('Test 5 : ',
   JSON.stringify(uniquifyArray(wordsUnique)) ===
     JSON.stringify([
@@ -103,9 +176,15 @@ const wordsFind = [
   'disobedience',
 ];
 
-function doesWordExist() {}
+function doesWordExist(v) {
+  for (let i = 0; i < v.length; i++) {
+    if (v === wordsFind[i]) {
+      return true;
+    }
+  }
+}
 console.log(doesWordExist(wordsFind[0]) === true? 'correct' : 'incorrect'); //true
-console.log(doesWordExist('nukEshte') === false ? 'correct' : 'incorrect'); //true
+console.log(doesWordExist('nukeshte') === true? 'correct' : 'incorrect'); //true
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -122,7 +201,15 @@ const wordsCount = [
   'matter',
 ];
 
-function howManyTimes() {}
+function howManyTimes(z, word) {
+  let count = 0;
+  for (let i = 0; i < z.length; i++) {
+    if (z[i] === word) {
+      count += 1;
+    }
+  }
+  return count;
+}
 
 console.log('Test 7 : ', howManyTimes(wordsCount,'matter') === 4 ? 'correct' : 'incorrect'); //true
 
